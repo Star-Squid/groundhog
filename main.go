@@ -18,12 +18,17 @@ import (
 // 	fmt.Print(statement)
 // }
 
+func summonNicole() {
+	fmt.Println("- Hey Nicole, get over here!")
+}
+
 func main() {
 	rand.Seed(time.Now().UnixNano())
 	var name string
 	randomAge := rand.Intn(80)
 	var age int
 
+	summonNicole()
 	fmt.Println("- What is your name?")
 	fmt.Scan(&name)
 	fmt.Printf("- Hello, %v!\nHow old are you?\n", name)
