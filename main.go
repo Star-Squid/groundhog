@@ -18,8 +18,8 @@ import (
 // 	fmt.Print(statement)
 // }
 
-func summonNicole() {
-	fmt.Println("- Hey Nicole, get over here!")
+func summonCat() {
+	fmt.Println("- Here, kitty kitty!")
 }
 
 func addFifty(x *int) {
@@ -35,10 +35,10 @@ func main() {
 
 	addFifty(&age)
 
-	summonNicole()
+	summonCat()
 	fmt.Println("- What is your name?")
 	fmt.Scan(&name)
-	fmt.Printf("- Hello, %v!\nHow old are you?\n", name)
+	fmt.Printf("- Hello, %v!\n- How old are you?\n", name)
 	fmt.Scan(&age)
 	fmt.Printf("- Wow, %v, you don't look %d!\n", name, age)
 	fmt.Printf("- Are you sure you're not %v?\n", randomAge)
