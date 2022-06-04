@@ -22,11 +22,18 @@ func summonNicole() {
 	fmt.Println("- Hey Nicole, get over here!")
 }
 
+func addFifty(x *int) {
+	*x += 20
+}
+
 func main() {
 	rand.Seed(time.Now().UnixNano())
 	var name string
 	randomAge := rand.Intn(80)
 	var age int
+	//num := 5
+
+	addFifty(&age)
 
 	summonNicole()
 	fmt.Println("- What is your name?")
