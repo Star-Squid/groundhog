@@ -15,19 +15,22 @@ func main() {
 	var numOfTries int
 	numOfTries = 0
 
-	for numOfTries = 1; numOfTries <= 3; numOfTries++ {
+	keepGoing := true
+
+	for numOfTries = 1; keepGoing; numOfTries++ {
 		var guess string
 		fmt.Println("What's the password?")
 		fmt.Scan(&guess)
 
 		if guess == correct {
 			fmt.Println("You're in!")
-			break
+			keepGoing = false
 		} else {
 			triesRemaining := 3 - numOfTries
 			fmt.Println("Incorrect password! Tries remaining:", triesRemaining)
 			if numOfTries == 3 {
 				fmt.Println("This isn't working. Goodbye.")
+				keepGoing = false
 			}
 		}
 	}
