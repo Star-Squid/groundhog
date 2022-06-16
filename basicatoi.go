@@ -6,9 +6,10 @@ func BasicAtoi(s string) rune { //NEEDS TO RTRN INT
 	//if s can be converted to int, return that, if not, return 0
 	//f the string is not considered as a valid number
 	//transforms a number defined as a string in a number defined as an int
+
 	bytes := []byte(s)
-	num := int(bytes[0]) //gives ascii value
-	character := rune(num)
+	num := int(bytes[0])   //gives ascii value
+	character := rune(num) //um, still gives ascii value
 
 	if character == '1' || character == '2' || character == '3' || character == '4' || character == '5' || character == '6' || character == '7' || character == '8' || character == '9' {
 		return character
